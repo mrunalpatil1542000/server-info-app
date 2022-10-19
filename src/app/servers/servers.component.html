@@ -1,0 +1,30 @@
+<label>Server Name</label>
+
+<!--Using data binding type--Event Binding -->
+<!--<input-->
+  <!--type="text"-->
+  <!--class="form-control"-->
+  <!--(input)="onUpdateServerName($event)">-->
+
+<!--Using data binding type--Two-way Binding -->
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
+
+<!--Using data binding type--String Interpolation -->
+<!--<p>{{ serverName }}</p>-->
+
+<!--Using data binding type--Property Binding and Event Binding -->
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()">Add Server</button>
+
+<!--Using data binding type--Property Binding -->
+<!--<p [innerText]="allowNewServer"></p>-->
+
+<!--Using data binding type--String Interpolation -->
+<p>{{ serverCreationStatus }}</p>
+<app-server></app-server>
+<app-server></app-server>
